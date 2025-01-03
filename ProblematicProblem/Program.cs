@@ -14,8 +14,7 @@ namespace ProblematicProblem
         static void Main(string[] args)
         {
             Random rng = new Random();
-            Console.Write(
-                "Hello, welcome to the random activity generator! \nWould you like to generate a random activity? yes/no: ");
+            Console.Write("Hello, welcome to the random activity generator! \nWould you like to generate a random activity? yes/no: ");
             bool cont;
             var contResponse = Console.ReadLine().ToLower();
             
@@ -32,7 +31,7 @@ namespace ProblematicProblem
 
                 Console.WriteLine();
                 Console.Write("We are going to need your information first! What is your name? ");
-                string userName = Console.ReadLine();
+                var userName = Console.ReadLine();
                 Console.WriteLine();
                 Console.Write("What is your age? ");
                 int userAge = int.Parse(Console.ReadLine());
@@ -42,7 +41,7 @@ namespace ProblematicProblem
 
                 if (seeList)
                 {
-                    foreach (string activity in activities)
+                    foreach (var activity in activities)
                     {
                         Console.Write($"{activity} ");
                         Thread.Sleep(250);
@@ -57,13 +56,13 @@ namespace ProblematicProblem
                     while (addToList)
                     {
                         Console.Write("What would you like to add? ");
-                        string userAddition = Console.ReadLine();
+                        var userAddition = Console.ReadLine();
 
                         activities.Add(userAddition);
 
-                        foreach (string activity in activities)
+                        foreach (var activity in activities)
                         {
-                            Console.Write($"{activities} ");
+                            Console.Write($"{activity} ");
                             Thread.Sleep(250);
                         }
 
